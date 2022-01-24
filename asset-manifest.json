@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/reactstudent%20/static/css/main.e6c13ad2.css",
-    "main.js": "/reactstudent%20/static/js/main.e6ae2bcc.js",
-    "static/js/787.5f3b9852.chunk.js": "/reactstudent%20/static/js/787.5f3b9852.chunk.js",
-    "index.html": "/reactstudent%20/index.html",
-    "main.e6c13ad2.css.map": "/reactstudent%20/static/css/main.e6c13ad2.css.map",
-    "main.e6ae2bcc.js.map": "/reactstudent%20/static/js/main.e6ae2bcc.js.map",
-    "787.5f3b9852.chunk.js.map": "/reactstudent%20/static/js/787.5f3b9852.chunk.js.map"
+    "main.css": "/reactstudent/static/css/main.e6c13ad2.css",
+    "main.js": "/reactstudent/static/js/main.f3884164.js",
+    "static/js/787.5f3b9852.chunk.js": "/reactstudent/static/js/787.5f3b9852.chunk.js",
+    "index.html": "/reactstudent/index.html",
+    "main.e6c13ad2.css.map": "/reactstudent/static/css/main.e6c13ad2.css.map",
+    "main.f3884164.js.map": "/reactstudent/static/js/main.f3884164.js.map",
+    "787.5f3b9852.chunk.js.map": "/reactstudent/static/js/787.5f3b9852.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.e6ae2bcc.js"
+    "static/js/main.f3884164.js"
   ]
 }
