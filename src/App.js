@@ -6,12 +6,12 @@ import DeleteStudent from './Components/DeleteStudent';
 import AddStudent from './Components/AddStudent';
 import UpdateStudent from './Components/UpdateStudent';
 import SearchStudent from './Components/SearchStudent';
-import Footer from './FooterComponent/Footer';
+import { Footer } from './FooterComponent/Footer';
 
 function App() {
   
   return (
-    <div style={{bottom:'0'}}>
+    <div style={{bottom:'0', backgroundColor:'#CCCCFF'}}>
       <header>
         <NavBar></NavBar>
       </header>

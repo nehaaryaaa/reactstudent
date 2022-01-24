@@ -2,8 +2,22 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateStudent  } from "../actions/studAction";
 import { Navigate, useParams } from "react-router-dom";
-import { TextField, Typography } from "@material-ui/core";
+import { makeStyles, TextField, Typography } from "@material-ui/core";
 
+const useStyles = makeStyles({
+    typo: {
+      marginLeft: 300,
+      marginTop: 25,
+      fontWeight : 'bold',
+      color:'#5D3FD3'
+    },
+    field: {
+        backgroundColor:'#CCCCFF',
+        border:'4px solid blueviolet',
+        borderRadius:'15px'
+    }  
+  });
+  
 function UpdateStudent(){
     let studAr = useSelector((store)=>store.StudReducer);
     let {id}=useParams();
@@ -26,31 +40,32 @@ function UpdateStudent(){
         dispatch(updateStudent(student));
         setFlag(true);
     }
-
+    const classes = useStyles();
+    
     return(
-        <div style={{'width':'500px'}}>
+        <div>
+        <Typography variant="h4" className={classes.typo}>UPDATE STUDENT DETAILS</Typography>
         {   
             flag===false?
-            <form onSubmit={test}  style={{border:'2px solid darkblue', margin:'20px 300px'}}>
+            <form onSubmit={test} style={{borderRadius:'30px', border:'3px solid darkblue', margin:'20px 300px',padding:'20px',backgroundColor:'#7B68EE'}}>
             <div>
                 <Typography>Student Id</Typography>
-                <TextField fullWidth id="outlined-basic"  variant="outlined" type="number" name="studId" value={student.studId} />
+                <TextField className={classes.field} fullWidth id="outlined-basic"  variant="outlined" type="number" name="studId" value={student.studId} />
             </div>
             <div>
                 <Typography>Student Name</Typography>
-                <TextField fullWidth id="outlined-basic" variant="outlined" type="text" name="studName" value={student.studName} onChange={setDetails} />
+                <TextField className={classes.field} fullWidth id="outlined-basic" variant="outlined" type="text" name="studName" value={student.studName} onChange={setDetails} />
             </div>
             <div>
                 <Typography>Student Department</Typography>
-                <TextField fullWidth id="outlined-basic" variant="outlined" type="text" name="studDepartment" value={student.studDepartment} onChange={setDetails} />
+                <TextField className={classes.field} fullWidth id="outlined-basic" variant="outlined" type="text" name="studDepartment" value={student.studDepartment} onChange={setDetails} />
             </div>
             <div>
                 <Typography>Year</Typography>
-                <TextField fullWidth id="outlined-basic" variant="outlined" type="text" name="studYear" value={student.studYear} onChange={setDetails} />
+                <TextField className={classes.field} fullWidth id="outlined-basic" variant="outlined" type="text" name="studYear" value={student.studYear} onChange={setDetails} />
             </div>
-            <div style={{margin: '5px 150px'}}>
-                <input type="submit" value="ADD" style={{ textDecoration: "none", backgroundColor: "darkblue", color:'lightblue', padding: '10px',margin:'10px'}} />
-                <input type="reset" value="RESET" style={{ textDecoration: "none", backgroundColor: "darkblue", color:'lightblue', padding: '10px'}} />
+            <div style={{marginLeft:'280px'}}>
+                <input type="submit" value="UPDATE" style={{ textDecoration: "none", backgroundColor: "#0000CD", color:'lightblue', padding: '10px', width:'100px', margin:'30px'}} />
             </div>
             </form>
             : <Navigate to="/students/showall"></Navigate>   

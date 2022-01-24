@@ -1,18 +1,11 @@
-import Typography from '@material-ui/core/Typography';
- 
-function Footer() {
- 
-  return (
-    <footer style={{ backgroundColor: 'black', height:'70px', color:'white', width: '100%', textAlign:'center', position: 'revert', left: '0px', marginBottom:'0px', marginTop:'200px'}}>
- 
-        <Typography >
-          React Student CRUD Operations
-        </Typography>
-        <Typography component="p">
-          @2022 All right reserved
-        </Typography>
+import { Typography } from '@material-ui/core';
 
-    </footer>
-  );
+export function Footer(){
+    
+    return(
+        <footer style={{backgroundColor: 'black', color: 'whitesmoke',textAlign: 'center',position: 'relative',
+            fontSize: '14px', padding: '5px', width: '99%', height: '40px', marginTop: '392px',left: 0,bottom: 0}}>
+            <Typography>@Copyright 2022 Student CRUD Operations</Typography>
+        </footer>
+    );
 }
- export default Footer;
